@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">In Touch</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_respond">Respond</string>
+    <string name="button_delay">Delay</string>
+    <string name="button_call">Call Instead</string>
+    <string name="checkbox_email">E-mail</string>
+    <string name="checkbox_sms">Sms</string>
+    <string name="hint_custom_response">Say something</string>
+    <string name="button_send">Send</string>
+    <string name="label_customise">Step 1. Customise</string>
+    <string name="label_configure">Step 2. Configure</string>
+    <string name="label_respond">Step 3. Respond</string>
+    <string name="label_custom">Enter custom response...</string>
+    <string name="label_canned">...or use a canned response.</string>
+    <string name="label_send_options">Send it how?</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="button_addcontact">Add Significant Other</string>
+    <string name="title_activity_edit_canned">EditCannedActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button_edit_response">Edit Canned</string>
+
+</resources>
