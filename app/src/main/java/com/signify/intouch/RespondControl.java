@@ -1,11 +1,14 @@
 package com.signify.intouch;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.signify.intouch.data.ResponseData;
@@ -15,6 +18,7 @@ public class RespondControl extends ActionBarActivity {
 
     Spinner responseSpinner;
     ResponseData mResponseData;
+    Button callButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +27,23 @@ public class RespondControl extends ActionBarActivity {
 
         propagateSpinner();
 
-
+        callButton = (Button)findViewById(R.id.button_call);
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callInstead();
+            }
+        });
     }
 
     private void setButtons(){
 
+    }
+
+    private void callInstead(){
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:" + ""));
+        startActivity(callIntent);
     }
 
     private void propagateSpinner(){

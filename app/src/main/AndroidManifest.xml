@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.signify.intouch" >
 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -24,13 +26,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.signify.intouch.RespondControl" />
         </activity>
-
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
-
         <activity
             android:name=".EditCannedActivity"
             android:label="@string/title_activity_edit_canned" >
         </activity>
+
     </application>
 
 </manifest>
