@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,12 +20,13 @@ public class RespondControl extends ActionBarActivity {
     Spinner responseSpinner;
     ResponseData mResponseData;
     Button callButton;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_respond_control);
-
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         propagateSpinner();
 
         callButton = (Button)findViewById(R.id.button_call);
