@@ -21,5 +21,7 @@
     <string name="title_activity_edit_canned">EditCannedActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="button_edit_response">Edit Canned</string>
+    <string name="hint_response_textfield">New response text goes here...</string>
+    <string name="text_delete_reference">Click on a response to delete.</string>
 
 </resources>

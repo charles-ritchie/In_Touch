@@ -1,13 +1,9 @@
 package com.signify.intouch;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
@@ -15,7 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.signify.intouch.R;
 import com.signify.intouch.data.ResponseData;
 
 public class EditCannedActivity extends ListActivity {
@@ -36,11 +31,12 @@ public class EditCannedActivity extends ListActivity {
                 android.R.layout.simple_list_item_1, mResponseData.getResponseList());
         setListAdapter(adapter);
 
+        //Click listeners
         ImageButton addButton = (ImageButton)findViewById(R.id.button_response_add);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveResponseFromField();
+                saveResponse();
                 adapter.notifyDataSetChanged();
             }
         });
@@ -48,7 +44,7 @@ public class EditCannedActivity extends ListActivity {
         responseField = (TextView)findViewById(R.id.textview_add_response);
     }
 
-    public void saveResponseFromField(){
+    public void saveResponse(){
         if(responseField.getText().length() > 3) {
             String resp = responseField.getText().toString();
             mResponseData.setString(resp).commit();
